@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>BlindPages Overview</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="2010" />
+<meta name="author" content="D. Squirrel" />
+<meta name="company" content="BlindPages, Ltd." />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<style type="text/css">
+table { border: 1px solid; border-collapse: collapse }
+th    { border: 1px solid }
+td    { border: 1px solid }
+</style>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>BlindPages Overview</h1>
+<h2>Press T to toggle outline view</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>BlindPages, Ltd.</h1>
+<h2>Unlocking the Web for Blind People</h2>
+<h4><a href="http://blindpages.com">http://blindpages.com</a>&nbsp;&nbsp;&nbsp;squirrel@blindpages.com</h4>
+<h4>0777 3795 491&nbsp;&nbsp;&nbsp;Old Kent Cottage, Frogholt, CT18 8AT.</h4>
+</div>
+
+
+<div class="slide">
+    <h1>Who?</h1>
+    <img style="float:left; margin:30px" 
+         width="230" height="144" 
+         src="images/ds.jpg" 
+        alt="Squirrel and his wife, Lisa, in front of their home in Frogholt, Kent."
+        title="Squirrel and his wife, Lisa, in front of their home in Frogholt, Kent."/>
+    <h3>Douglas Squirrel</h3>
+    <ul>
+        <li>10 years as a software leader</li>
+        <li>CTO: Nil to &pound;4 million revenue in five years</li>
+    </ul>
+    <div style="clear:left"/>
+    <img style="float:left; margin:30px"
+         width="318" height="95"
+         src="images/people.png"
+         alt="Several head-and-shoulder silhouettes"
+         title="Several head-and-shoulder silhouettes"/>
+    <h3>Consultant programmers</h3>
+    <h3>Sales, finance, legal</h3>
+<div style="float: none; clear: left"/>
+    <div class="handout">
+Douglas holds Master's and Candidate's degrees in maths from the University of California, Berkeley. As Chief Technology Officer of youDevise, Ltd., he has overseen the growth of the company from &pound;0 in annual software revenue (2004) to &pound;4 million (2009) with two successful products used around the world; the firm counts all global investment banks and many very large hedge funds among their customers. He now manages a technology organisation of 25 people. Detailed CV at <a href="http://douglassquirrel.com">Squirrel's home page</a>. 
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Problem</h1>
+    <img style="float:left;margin:40px;"
+         width="640" height="335"    
+         src="images/labour.png" 
+         alt="The Labour Party home page."
+      title="The Labour Party home page."/>
+<div>
+    <ol>
+        <li>Text as images or Flash</li>
+        <li>Javascript dropdowns</li>
+        <li>Unlabelled forms and images</li>
+    </ol>
+    <hr/>
+    <ul>
+        <li>Lawsuits</li>
+        <li>Lost revenue</li>
+        <li><em>Months or years to fix</em></li>
+    </ul>
+</div>
+    <div style="clear:left;"></div>
+    <div class="handout">
+<p><strong>Most sites inaccessible.</strong> In 2004, the Disability Rights Commission found that <a href="http://news.bbc.co.uk/1/hi/technology/3626533.stm">over 80% of web sites were unusable by disabled people</a>. The situation is no better today, as the Labour Party's own web site shows - among many other egregious errors in design, we find that much of the text on the page cannot read by screenreaders, and navigation of the forms on the right side is nearly impossible without proper labels.</p>
+<p><strong>Huge economic and social costs.</strong> Laws like the ADA (US), DDA (UK), and the DDA (Aus.) specifically require web site owners to make their sites accessible, and some lawsuits have been successful - for example, the US retailer Target <a href="http://www.dralegal.org/cases/private_business/nfb_v_target.php">paid $6 million after a two-year legal fight</a>. The risk of losing a lawsuit is not the only cost to a business who ignores accessibility - the RNIB found that <a href="http://www.actionforblindpeople.org.uk/news/media-centre/faq-journalists,892,SA.html">there are over two million sight-impaired people in the UK alone</a>, a substantial potential market by any measure.</p>
+<p><strong>Months or years to fix.</strong> When Target finally lost their lawsuit, they still needed six months of concentrated development effort to make their site accessible. Smaller firms with remote or outsourced IT provision find it even harder to fix their broken sites. Meanwhile, they remain in violation of the law and lose out on income from disabled people.</p>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Solution - External Conversion</h1>
+    <img width="1000" height="335"    
+         src="images/howitworks.png" 
+         alt="Diagram shows the inaccessible Labour home page, an arrow leading to a box representing blindpages.com (which indicates that it uses Nokogiri, Ruby, and a DSL), and an arrow leading to the accessible page."
+      title="Diagram shows the inaccessible Labour home page, an arrow leading to a box representing blindpages.com (which indicates that it uses Nokogiri, Ruby, and a DSL), and an arrow leading to the accessible page."/>
+    <div class="handout">
+<p>BlindPages makes a site accessible - without any modifications to the original site at all. How it works:</p>
+<ol>
+    <li>The user requests a page from blindpages.com.</li>
+    <li>The blindpages.com server reads the inaccessible page from the original site.</li>
+    <li>The blindpages.com server looks up conversion instructions specific to that page written in the BlindPages DSL by a trained programmer.</li>
+    <li>Following the instructions, blindpages.com converts the page to an accessible version and delivers this to the user.</li>
+</ol> 
+<p><strong>Technology.</strong></p>
+<ul>
+    <li><a href="http://nokogiri.org/">Nokogiri</a> is an open-source HTML and XML parsing tool that deals well with both valid and invalid markup.</li>
+    <li><a href="http://www.ruby-lang.org">Ruby</a> is an emerging programming language most famous as a component of the <a href="http://rubyonrails.org">Ruby on Rails</a> platform used by large, successful websites like Twitter.</li>
+    <li>A <a href="http://en.wikipedia.org/wiki/Domain-specific_language">Domain-Specific Language (DSL)</a> helps developers carry out a specific task with less code and fewer errors. The BlindPages DSL keeps per-page instructions brief and easy to maintain.</li>
+</ul>
+<p>Note display-only pages (without forms) can be navigated on the phone as well. Ring 0845 862 0346 to try this.</p>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Solution - Monitoring</h1>
+    <div style="float:left; margin:30px"> 
+      <img width="231" height="168"    
+           src="images/nagios.png" 
+           alt="A screen from the Nagios monitoring tool."
+         title="A screen from the Nagios monitoring tool."/>
+    </div>
+    <img width="225" height="162"    
+         src="images/usingcomputer.jpg" 
+         alt="A partially-sighted person uses a computer with a magnified screen."
+       title="A partially-sighted person uses a computer with a magnified screen."/>
+    <div style="float: none; clear: left"/>
+    <pre>cl
+  Scenario: Donating
+    <span style="color:#00ff00">Given I have opened "http://blindpages.com/labour"</span>
+    <span style="color:#00ff00">When I click the "How you can help" link</span>
+    <span style="color:#00ff00">Then the page should contain a button with alt text "DONATE"</span>
+
+1 scenario (<span style="color:#00ff00">1 passed</span>)
+3 steps (<span style="color:#00ff00">3 passed</span>)
+    </pre>      
+    <div class="handout">
+<p><strong>Automated monitoring.</strong> <a href="http://www.nagios.org/">Nagios</a> is a standard tool for monitoring servers and web sites. BlindPages customises this tool to continuously and automatically test accessible sites to ensure they remain accessible, using easily-readable text as shown. Alerts can be sent by email or even phone and text message to ensure any loss of accessibility is corrected quickly.</p>
+<p><strong>Human testing.</strong> There is no replacement for usage testing by real users. BlindPages can provide periodic checks by ordinary visually-impaired users, accessibility experts, or both.</p>
+    </div>
+</div>
+
+
+<div class="slide">
+    <h1>Full Solution</h1>
+    <img width="1002" height="340"
+         src="images/fullsolution.png"
+         alt="Six colour-coded boxes: Assessment (red-orange), External Conversion (orange), Internal Conversion (brown), Project Management (red), Training (cyan), Monitoring (blue)."
+       title="Six colour-coded boxes: Assessment (red-orange), External Conversion (orange), Internal Conversion (brown), Project Management (red), Training (cyan), Monitoring (blue)."/>
+    <div class="handout">
+<p>The BlindPages vision is to provide, directly or indirectly, any of the six services described here, fitting them together to form campaigns as shown on the next slide.</p>
+<ul>
+    <li><em>Assessment</em>. Examining a web site, evaluating against standard criteria for accessibility, and creating a list of changes required to achieve full accessibility.</li>
+    <li><em>External Conversion</em>. Converting a site to an accessible form without any changes to the original site. (See above.)</li>
+    <li><em>Internal Conversion</em>. Converting the code and HTML that drives a web site to achieve accessibility.</li>
+    <li><em>Project Management</em>. Co-ordinating the activities in the other five areas to form a coherent project that is completed to budget and on time.</li>
+    <li><em>Training</em>. Educating developers, programmers, testers, business analysts, and managers about accessibility issues and creation of fully accessible web sites.</li>
+    <li><em>Monitoring</em>. Using automated tools and manual tests to verify that a site remains accessible. (See above.)</li>
+</ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Models</h1>
+    <div style="float:left;">
+        <p>Traditional</p>
+        <img width="501" height="113"
+             src="images/traditional-model.png"
+             alt="Shows a project starting with assessment and proceeding to internal conversion and training, then monitoring, with project management throughout."
+           title="Shows a project starting with assessment and proceeding to internal conversion and training, then monitoring, with project management throughout."/>
+        <p>Bridge</p>
+        <img width="501" height="113"
+             src="images/bridge-model.png"
+             alt="Shows a project starting with assessment and proceeding to external conversion, internal conversion and training, then monitoring, with project management throughout."
+           title="Shows a project starting with assessment and proceeding to external conversion, internal conversion and training, then monitoring, with project management throughout."/>
+    </div>
+    <div>
+        <p>Campaign</p>
+        <img width="501" height="113"
+             src="images/campaign-model.png"
+             alt="Shows a project starting with assessment and external conversion of several sites, followed by a campaign, then internal conversion and training, and finally monitoring, with project management throughout."
+       title="Shows a project starting with assessment and external conversion of several sites, followed by a   campaign, then internal conversion and training, and finally monitoring, with project management throughout."/>
+        <p>Portal</p>
+        <img width="501" height="113"
+             src="images/portal-model.png"
+             alt="Shows a project starting with assessment, external conversion, and monitoring of several sites, with project management throughout."
+           title="Shows a project starting with assessment, external conversion, and monitoring of several sites, with project management throughout."/>
+    </div>
+<div style="float: none; clear: left"/>
+    <div class="handout">
+These pictures represent four ways of combining BlindPages services into a programme. Each has ongoing project management to ensure the programme proceeds smoothly.
+<ul>
+    <li>The <em>traditional model</em> involves assessment, followed by conversion and training involving the company's development team, and monitoring.</li>
+    <li>The <em>bridge model</em> is like the traditional model, but involves a period where BlindPages supply an accessible site without changes to the underlying site.</li>
+    <li>In the <em>campaign model</em>, we first convert a number of sites externally, without changes to them. This helps us prove that blind and partially-sighted people want to use the sites and that it is possible to make them accessible. Then, after a campaign to convince site owners to convert, we assist them in an internal conversion and training programme, followed by monitoring.</li>
+    <li>The <em>portal model</em> is completely independent of site owners, with no changes required to underlying sites. We perform a number of external conversions and monitor for changes. The sites may be made available from a common portal.</li>
+</ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Global Customers</h1>
+    <img width="1002" height="340"
+         src="images/customers.png"
+         alt="A map of the world, with several countries labelled: the US with 'AFB, NFB, ACB', Canada with 'CNIB', the UK with 'RNIB', Germany with 'DBSV', and Australia with 'Vision Australia'."
+       title="A map of the world, with several countries labelled: the US with 'AFB, NFB, ACB', Canada with 'CNIB', the UK with 'RNIB', Germany with 'DBSV', and Australia with 'Vision Australia'."/>
+    <div class="handout">
+There are a number of countries with effective national blindness organisations who are potential customers for a BlindPages programme. Some of these are indicated here; each of those listed has tens of thousands of members and an annual budget in the millions of pounds.
+<ul>
+    <li><em>United States</em>: The <a href="http://www.afb.org/">American Foundation for the Blind</a>, the <a href="http://www.nfb.org">National Federation of the Blind</a>, and the <a href="http://www.acb.org/">American Council of the Blind</a>. </li>
+    <li><em>Canada:</em> The <a href="http://www.cnib.ca/">CNIB</a>.</li>
+    <li><em>United Kingdom:</em> The <a href="http://www.rnib.org.uk">Royal National Institute of Blind People</a>.</li>
+    <li><em>Germany:</em> <a href="http://www.dbsv.org/">Deutscher Blinden- und Sehbehindertenverband e.V.</a>.</li>
+    <li><em>Australia:</em> <a href="http://www.visionaustralia.org.au/">Vision Australia</a>.</li>
+</ul>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Potential acquirers</h1>
+    <ul>
+        <li>Web and usability consultancies (Nomensa)</li>
+        <li>Software companies with products for the blind (Freedom Scientific, Dolphin)</li>
+        <li>Strategic players (Google)</li>
+    </ul>
+    <div class="handout">
+This list shows some possible acquirers for BlindPages once it becomes a saleable entity; it would be useful to define exit criteria that would make BlindPages attractive to these buyers.
+    </div>
+</div>
+
+</div>
+</body>
+</html>
