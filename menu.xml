@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version="2.0" xmlns="http://www.w3.org/2001/vxml">
+  <meta name="maintainer" content="squirrel@blindpages.com"/>
+  <property name="inputmodes" value="dtmf"/>
+  <form>
+    <field name="choice">
+      <prompt>
+        <prosody rate="-20%">Please press 1 for BlindPages</prosody>
+        <break time="500"/>
+      </prompt>
+      <prompt>
+        <prosody rate="-20%">Press 2 for Connect</prosody>
+        <break time="500"/>
+      </prompt>
+      <prompt>
+        <prosody rate="-20%">Press 3 for Maps</prosody>
+        <break time="500"/>
+      </prompt>
+      <grammar mode="dtmf" xml:lang="en-GB" root="top">
+        <rule id="top">
+          <one-of>
+            <item>1</item>
+            <item>2</item>
+            <item>3</item>
+          </one-of>
+        </rule>
+      </grammar>
+      <noinput>
+        <prompt>
+          <prosody rate="-20%">I did not hear anything. Please try again.</prosody>
+          <break time="500"/>
+        </prompt>
+        <reprompt/>
+      </noinput>
+      <nomatch>
+        <prompt>
+          <prosody rate="-20%">I did not recognise that. Please try again.</prosody>
+          <break time="500"/>
+        </prompt>
+        <reprompt/>
+      </nomatch>
+    </field>
+    <filled>
+      <if cond="choice == '1'">
+        <submit method="get" next="http://unlock.blindpages.com/auth?format=xml"/>
+      </if>
+      <if cond="choice == '2'">
+        <submit method="get" next="http://connect.blindpages.com/tasks/new"/>
+      </if>
+      <if cond="choice == '3'">
+        <submit method="get" next="http://maps.blindpages.com/requests/new"/>
+      </if>
+    </filled>
+  </form>
+</vxml>
