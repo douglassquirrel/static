@@ -42,7 +42,7 @@
     </field>
     <filled>
       <if cond="choice == '1'">
-        <submit method="get" next="http://unlock.blindpages.com?format=xml"/>
+        <submit method="get" next="http://unlock.blindpages.com"/>
       </if>
       <if cond="choice == '2'">
         <submit method="get" next="http://connect.blindpages.com/tasks/new"/>
