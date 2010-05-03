@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>Accessible Mo-Express</title>
+  </head>
+  <body>
+<!-- Should produce GETs of the form 
+https://www.moexpress.com/tac/ParkingWarning.aspx?Origin=1&Destination=6&Departing=5/4/2010&Returning=5/4/2010&RT=-1&Pax=1&DepartAirline=..None&ReturnAirline=..None 
+-->
+    <p>
+      When you click the button below, this test page should start a Moexpress reservation for you with these settings:
+    </p>
+    <ol>
+      <li>Round trip travel</li>
+      <li>One passenger</li>
+      <li>Origin at MOX Office (Express Service)</li>
+      <li>Destination Kansas City Airport</li>
+      <li>Departure date 10 May 2010</li>
+      <li>Return date 11 May 2010</li>
+      <li>No departing or returning airline specified</li>
+    </ol>
+    <p>
+      Clearly before it will be useful the page will need to allow you to change these values!
+    </p>
+    <form action="https://www.moexpress.com/tac/ParkingWarning.aspx" method="get">
+      <p>
+        <input type="hidden" name="Origin"        value="1"/>
+        <input type="hidden" name="Destination"   value="6"/>
+        <input type="hidden" name="Departing"     value="5/10/2010"/>
+        <input type="hidden" name="Returning"     value="5/11/2010"/>
+        <input type="hidden" name="RT"            value="-1"/>
+        <input type="hidden" name="Pax"           value="1"/>
+        <input type="hidden" name="DepartAirline" value="..None"/>
+        <input type="hidden" name="ReturnAirline" value="..None"/>
+        <input type="submit" value="Proceed"/>
+      </p>
+    </form>
+  </body>
+</html>
