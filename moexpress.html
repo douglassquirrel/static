@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
     <title>Accessible Mo-Express</title>
@@ -7,37 +7,136 @@
 <!-- Should produce GETs of the form 
 https://www.moexpress.com/tac/ParkingWarning.aspx?Origin=1&Destination=6&Departing=5/4/2010&Returning=5/4/2010&RT=-1&Pax=1&DepartAirline=..None&ReturnAirline=..None 
 -->
-    <p>
-      Before using this page, please click the link below, and then click the [Back] button to return to this page.
-    </p>
-    <p><a href="https://www.moexpress.com/tac/OLRS.aspx?OLRS=TRUE">Click me before using this page</a></p>
-    <p>
-      When you click the button below, this test page should start a Moexpress reservation for you with these settings:
-    </p>
-    <ol>
-      <li>Round trip travel</li>
-      <li>One passenger</li>
-      <li>Origin at MOX Office (Express Service)</li>
-      <li>Destination Kansas City Airport</li>
-      <li>Departure date 10 May 2010</li>
-      <li>Return date 11 May 2010</li>
-      <li>No departing or returning airline specified</li>
-    </ol>
-    <p>
-      Clearly before it will be useful the page will need to succeed without first visiting moexpress.com, and it will need to allow you to change these settings shown!
-    </p>
     <form action="https://www.moexpress.com/tac/ParkingWarning.aspx" method="get">
       <p>
-        <input type="hidden" name="Origin"        value="1"/>
-        <input type="hidden" name="Destination"   value="6"/>
-        <input type="hidden" name="Departing"     value="5/10/2010"/>
-        <input type="hidden" name="Returning"     value="5/11/2010"/>
-        <input type="hidden" name="RT"            value="-1"/>
-        <input type="hidden" name="Pax"           value="1"/>
-        <input type="hidden" name="DepartAirline" value="..None"/>
-        <input type="hidden" name="ReturnAirline" value="..None"/>
+        <label for="RT">Select Round Trip or One Way: </label>
+        <select name="RT" id="RT">
+          <option value="-1">Round Trip</option>
+          <option value="0" >One Way</option>
+        </select>
+      </p>
+      <p>
+        <label for="Pax">Total number of passengers including infants 3 or under:</label>
+        <select name="Pax" id="Pax">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+        </select>
+      </p>
+      <p>
+        <label for="Origin">From (Origin):</label>
+        <select name="Origin" id="Origin">
+          <option value="1">MOX Office (Express Service)</option>
+	      <option value="2">Columbia Door to Door Service</option>
+	      <option value="4">Boonville McDonalds</option>
+          <option value="6">Kansas City Airport</option>
+	      <option value="3">Kingdom City McDonalds</option>
+	      <option value="5">St. Louis Airport</option>
+        </select>
+      </p>
+      <p>
+        <label for="Destination">To (Destination):</label>
+        <select name="Destination" id="Destination">
+          <option value="1">MOX Office (Express Service)</option>
+	      <option value="2">Columbia Door to Door Service</option>
+	      <option value="4">Boonville McDonalds</option>
+          <option value="6">Kansas City Airport</option>
+	      <option value="3">Kingdom City McDonalds</option>
+	      <option value="5">St. Louis Airport</option>
+        </select>
+      </p>
+      <p>
+        <label for="DepartAirline">Departing Airline</label>
+        <select name="DepartAirline" id="DepartAirline">
+          <option selected="selected" value="..None                   ">..None                   </option>
+	      <option value="Air Canada               ">Air Canada               </option>
+          <option value="Air Tran">Air Tran</option>
+      	  <option value="America West             ">America West             </option>
+          <option value="American                 ">American                 </option>
+          <option value="American Cxn">American Cxn</option>
+          <option value="ATA">ATA</option>
+          <option value="Charter Flight           ">Charter Flight           </option>
+          <option value="Charter Flight / SW">Charter Flight / SW</option>
+          <option value="Comair                   ">Comair                   </option>
+          <option value="Continental              ">Continental              </option>
+          <option value="Delta                    ">Delta                    </option>
+          <option value="Delta Express            ">Delta Express            </option>
+          <option value="ExpressJet">ExpressJet</option>
+          <option value="Frontier                 ">Frontier                 </option>
+          <option value="KLM/Northwest            ">KLM/Northwest            </option>
+          <option value="Mesa">Mesa</option>
+          <option value="Midwest Connect">Midwest Connect</option>
+          <option value="Midwest Express          ">Midwest Express          </option>
+          <option value="None                     ">None                     </option>
+          <option value="Northwest                ">Northwest                </option>
+          <option value="Other                    ">Other                    </option>
+          <option value="Skybus">Skybus</option>
+          <option value="SkyWest">SkyWest</option>
+          <option value="Southwest                ">Southwest                </option>
+          <option value="United                   ">United                   </option>
+          <option value="US Airways               ">US Airways               </option>
+          <option value="US Airways Express       ">US Airways Express       </option>
+          <option value="USA 3000                 ">USA 3000                 </option>
+        </select>
+      </p>
+      <p>
+        <label for="ReturnAirline">Returning Airline</label>
+        <select name="ReturnAirline" id="ReturnAirline">
+          <option selected="selected" value="..None                   ">..None                   </option>
+	      <option value="Air Canada               ">Air Canada               </option>
+          <option value="Air Tran">Air Tran</option>
+      	  <option value="America West             ">America West             </option>
+          <option value="American                 ">American                 </option>
+          <option value="American Cxn">American Cxn</option>
+          <option value="ATA">ATA</option>
+          <option value="Charter Flight           ">Charter Flight           </option>
+          <option value="Charter Flight / SW">Charter Flight / SW</option>
+          <option value="Comair                   ">Comair                   </option>
+          <option value="Continental              ">Continental              </option>
+          <option value="Delta                    ">Delta                    </option>
+          <option value="Delta Express            ">Delta Express            </option>
+          <option value="ExpressJet">ExpressJet</option>
+          <option value="Frontier                 ">Frontier                 </option>
+          <option value="KLM/Northwest            ">KLM/Northwest            </option>
+          <option value="Mesa">Mesa</option>
+          <option value="Midwest Connect">Midwest Connect</option>
+          <option value="Midwest Express          ">Midwest Express          </option>
+          <option value="None                     ">None                     </option>
+          <option value="Northwest                ">Northwest                </option>
+          <option value="Other                    ">Other                    </option>
+          <option value="Skybus">Skybus</option>
+          <option value="SkyWest">SkyWest</option>
+          <option value="Southwest                ">Southwest                </option>
+          <option value="United                   ">United                   </option>
+          <option value="US Airways               ">US Airways               </option>
+          <option value="US Airways Express       ">US Airways Express       </option>
+          <option value="USA 3000                 ">USA 3000                 </option>
+        </select>
+      </p>
+      <p>
+        <label for="Departing">Departing (format month/day/year):</label>
+        <input type="text" name="Departing" id="Departing"/>
+      </p>
+      <p>
+        <label for="Returning">Returning (format month/day/year):</label>
+        <input type="text" name="Returning" id="Returning"/>
+      </p>
+      <p>
         <input type="submit" value="Proceed"/>
       </p>
     </form>
+    <iframe src="https://www.moexpress.com/tac/OLRS.aspx?OLRS=TRUE" width="0" height="0" title="ignore this frame" style="display:none"/>
   </body>
 </html>
